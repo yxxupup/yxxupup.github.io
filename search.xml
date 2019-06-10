@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python-Day2]]></title>
+    <url>%2F2019%2F06%2F10%2FPython-Day2%2F</url>
+    <content type="text"><![CDATA[Python100天入门到精通之Day2详解 Python-Day21. 商和余数12a // b # 求商a % b #求余数 2. 输入（input（）的使用方法）​ 输入的为表达式，比如整型数据或者字符串等等。 ​ 输入的时候会自动先把input()括号中的字符串输出作为一个引导。 ​ 在想要输入数字时必须用类型转换函数得到想要的类型 1234&gt;&gt;&gt; a = input("a = ") #输入表达式a = &gt;&gt;&gt; b = int(input("b = ")) #输入整型数据b = 3.格式化输出Python使用一个字符串作为模板。模板中有格式符，这些格式符为真实值预留位置，并说明真实数值应该呈现的格式。Python用一个元组将多个值传递给模板，每个值对应一个格式符。 下面左边为格式符，右边为输出类型 3.1整型输出%b——binary二进制%o —— oct 八进制%d或%i —— dec 十进制%x —— hex 十六进制 12345678&gt;&gt;&gt; print('%o' % 20)24&gt;&gt;&gt; print('%d' % 20)20&gt;&gt;&gt; print('%x' % 20)14&gt;&gt;&gt;print('%b' % 20)10100 3.2浮点数输出%f或%F ——保留小数点后面六位有效数字 %.3f，保留3位小数位%e或%E ——保留小数点后面六位有效数字，指数形式输出( %.3e，保留3位小数位，使用科学计数法%g或%G ——在保证六位有效数字的前提下，使用小数方式，否则使用科学计数法 %.3g，保留3位有效数字，使用小数或科学计数法 1234567891011121314&gt;&gt;&gt; print('%f' % 1.11) # 默认保留6位小数1.110000&gt;&gt;&gt; print('%.1f' % 1.11) # 取1位小数1.1&gt;&gt;&gt; print('%e' % 1.11) # 默认6位小数，用科学计数法1.110000e+00&gt;&gt;&gt; print('%.3e' % 1.11) # 取3位小数，用科学计数法1.110e+00&gt;&gt;&gt; print('%g' % 1111.1111) # 默认6位有效数字1111.11&gt;&gt;&gt; print('%.7g' % 1111.1111) # 取7位有效数字1111.111&gt;&gt;&gt; print('%.2g' % 1111.1111) # 取2位有效数字，自动转换为科学计数法1.1e+03 3.3字符串%s——字符串（采用str()的显示）%r——字符串（采用repr()的显示）%c——单个字符输出 把一个字符串传给 str() 函数再打印到终端的时候，输出的字符不带引号。而将一个字符串传给 repr() 函数再打印到终端的时候，输出的字符带有引号。 str() 的输出追求可读性，输出格式要便于理解，适合用于输出内容到用户终端。repr() 的输出追求明确性，除了对象内容，还需要展示出对象的数据类型信息，适合开发和调试阶段使用。 12&gt;&gt;&gt;print("Your name is %s.You're %d years old" % ('SLEEPYHEAD',22))Your name is SLEEPYHEAD.You're 22 years old 4.检查变量类型利用type()函数进行变量类型检验，主要有int、long(长整型)、float、complex(复数类型，形式为x+yj)、str(字符串类型)、bool(False or True)、list(列表)、tuple(元组)、字典(dict)、set(集合)等等 123456&gt;&gt;&gt;a = 2+3j&gt;&gt;&gt;b = 'hello,world'&gt;&gt;&gt;print(type(a))&gt;&gt;&gt;print(type(b))&lt;class'complex'&gt;&lt;class"str"&gt; 5.类型转换 转换为int：float去掉小数点及后面的值；str和bytes不能含有0-9和+和-以外的字符； 转换为float：int自动添加一位小数0；str和bytes不能含有0-9和+和-和小数点.以外的字符； 转换为complex：int和float自动添加虚数部分为0j；str可以通过转化为int或float或者符合complex表达式规则直接转化为complex 转化为str：任何对象利用str()转化为str 转化为bytes：只有str可以转化为bytes 转化为list或tuple：只有序列可以，如str、tuple、dict、set等 123456int(x) 将x转换为一个整数float(x) 将x转换到一个浮点数str(x) 将对象 x 转换为字符串tuple(s) 将序列 s 转换为一个元组list(s) 将序列 s 转换为一个列表set(s) 将序列 s 转换为一个集合 参考文章python基础_格式化输出（%用法和format用法) 字符串格式化 (%操作符) Python中str()与repr()函数的区别 史上最全的 Python 3 类型转换指南]]></content>
+      <categories>
+        <category>Python:Day2-100</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Pyinstaller一闪而过的解决方法]]></title>
     <url>%2F2019%2F06%2F07%2Fpyinstaller%E4%B8%80%E9%97%AA%E8%80%8C%E8%BF%87%2F</url>
     <content type="text"><![CDATA[pyinstaller打包程序成exe运行时一闪而过的解决方案 pyinstaller打包程序为exe运行时一闪而过的解决办法123import os你的代码os.system(&quot;pause&quot;) 举个例子123456789&quot;&quot;&quot;将华氏温度转换为摄氏温度&quot;&quot;&quot;import osf = float(input(&apos;请输入华氏温度: &apos;))c = (f - 32) / 1.8print(&apos;%.1f华氏度 = %.1f摄氏度&apos; % (f, c))os.system(&quot;pause&quot;) 打包时使用语法： 1pyinstaller name.py exe文件出现在dist/name文件夹下 运行结果]]></content>
